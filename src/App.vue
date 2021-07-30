@@ -1,32 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <loading
+      :active.sync="isLoading"
+      color="#9f65ff"
+      :lock-scroll="true"
+      background-color="var(--bg-color)"
+      :opacity="0.8"
+    />
+    <Navigation />
+    <ToTopButton />
+    <router-view />
   </div>
 </template>
 
+<script>
+import Navigation from '@/components/Navigation.vue';
+import ToTopButton from '@/components/ToTopButton.vue';
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
+
+export default {
+  components: {
+    Navigation,
+    ToTopButton,
+    Loading,
+  },
+  computed: {
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import './assets/stylesheet/all.scss';
 </style>

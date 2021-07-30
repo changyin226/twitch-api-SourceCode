@@ -1,0 +1,29 @@
+.filter{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  span{
+    color: var(--font-color);
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  select{
+    appearance: none;
+    font-size: initial;
+    text-align: center;
+    text-align-last:center;
+    padding: 5px 14px 5px 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--font-color);
+    background: url("https://ourjs.github.io/static/2015/arrow.png") no-repeat right center transparent;
+    background-color: var(--search-bg-color);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    &:hover{
+      background-color: var( --select-bg-hover-color);
+      cursor: pointer;
+    }
+  }
+}

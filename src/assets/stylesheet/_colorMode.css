@@ -1,0 +1,53 @@
+:root {
+  --bg-color: rgb(246, 246, 247);
+  --nav-bg-color: rgb(255, 255, 255);
+  --nav-border-bottom: rgb(222, 222, 222);
+  --search-bg-color: rgb(229, 229, 229);
+  --search-bg-focus-color: rgb(255, 255, 255);
+  --search-btn-not-allow-bg-color:rgb(249, 249, 249);
+  --search-btn-not-allow-color: rgb(212, 212, 212);
+  --search-btn-color: rgb(16, 16, 17);
+  --search-btn-bg-color: rgb(242, 242, 242);
+  --search-btn-hover-bg-color: rgb(229, 229, 229);
+  --search-placeholder-color: rgb(100, 100, 100);
+  --font-color: #000;
+  --second-font-color: rgb(73, 73, 84);
+  --desc-bg-color: #fff;
+  --select-bg-color: rgb(233, 233, 234);
+  --select-bg-hover-color: rgb(221, 221, 222);
+  --view-btn-color: rgb(233, 233, 234);
+  --view-btn-hover-color: rgb(221, 221, 222);
+  --tag-color: rgb(221, 221, 222);
+  --team-bg-color: rgb(226, 226, 231);
+  --teamList-bg-color: #fff;
+  --teamList-border-color: rgb(209, 209, 214);
+  --teamListCard-hover-bg: rgb(229, 229, 229);
+  --card-loading-bg: rgb(223, 223, 234);
+}
+
+.dark-mode{
+  --bg-color: rgb(16, 16, 17);
+  --nav-bg-color: rgb(23, 23, 26);
+  --nav-border-bottom: rgb(6, 6, 7);
+  --search-bg-color: rgb(69, 69, 72);
+  --search-bg-focus-color:#000;
+  --search-btn-not-allow-bg-color: rgb(40, 40, 43);
+  --search-btn-not-allow-color: rgb(69, 69, 72);
+  --search-btn-color: rgb(237, 237, 239);
+  --search-btn-bg-color: rgb(58, 58, 60);
+  --search-btn-hover-bg-color: rgb(69, 69, 72);
+  --search-placeholder-color: rgb(200, 200, 200);
+  --font-color: #fff;
+  --second-font-color: rgb(163, 163, 175);
+  --select-bg-hover-color: rgb(64, 64, 65);
+  --desc-bg-color: rgb(23, 23, 26);
+  --select-bg-color: rgb(52, 52, 52);
+  --view-btn-color: rgb(52, 52, 52);
+  --view-btn-hover-color: rgb(64, 64, 65);
+  --tag-color: rgb(64, 64, 65);
+  --team-bg-color: rgb(34, 34, 39);
+  --teamList-bg-color: rgb(23, 23, 26);
+  --teamList-border-color: rgb(17, 17, 20);
+  --teamListCard-hover-bg: #696972;
+  --card-loading-bg: rgb(34, 34, 39);
+}

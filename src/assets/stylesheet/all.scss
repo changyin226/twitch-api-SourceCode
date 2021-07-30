@@ -1,0 +1,15 @@
+@import './assets/stylesheet/_cssReset.css';
+@import './assets/stylesheet/_colorMode.css';
+@import './filter.scss';
+@import './tag.scss';
+@import './btn.scss';
+@import './btn.scss';
+@import './notice.scss';
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg-color);
+}
