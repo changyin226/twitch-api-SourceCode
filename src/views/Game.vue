@@ -81,8 +81,8 @@ export default {
       }).then((response) => {
         [this.game] = response.data.data;
         this.getViewers();
-      }).catch(() => {
-        this.$swal('發生錯誤，請重新整理');
+      }).catch((err) => {
+        this.$swal(err.response.data.message);
       });
     },
     getViewers() {

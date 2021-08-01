@@ -62,10 +62,10 @@ export default {
           if (mounted) this.$store.commit('LOADING');
           this.observing = true;
         }, 500);
-      }).catch(() => {
+      }).catch((err) => {
         this.gameList.splice(this.listNum - 5);
         if (mounted) this.$store.commit('LOADING');
-        this.$swal('發生錯誤，請重新整理');
+        this.$swal(err.response.data.message);
       });
     },
     getViewers(name, index) {

@@ -107,9 +107,9 @@ export default {
           this.getUserInfo(user.name, user.display_name, user.logo, i);
         });
         this.$store.commit('LOADING');
-      }).catch(() => {
+      }).catch((err) => {
         this.$store.commit('LOADING');
-        this.$swal('發生錯誤，請重新整理');
+        this.$swal(err.message);
       });
     },
     getUserInfo(name, displayName, logo, index) {
@@ -138,8 +138,8 @@ export default {
           };
           this.$set(this.users, index, obj);
         }
-      }).catch(() => {
-        this.$swal('發生錯誤，請重新整理');
+      }).catch((err) => {
+        this.$swal(err.response.data.message);
       });
     },
   },

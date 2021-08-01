@@ -154,9 +154,9 @@ export default {
         });
         this.tags = tags;
         this.$store.commit('LOADING');
-      }).catch(() => {
+      }).catch((err) => {
         this.$store.commit('LOADING');
-        this.$swal('發生錯誤，請重新整理');
+        this.$swal(err.response.data.message);
       });
   },
   methods: {
