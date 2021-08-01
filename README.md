@@ -1,4 +1,4 @@
-# twitch-api
+# Twitch-API
 
 ## Project setup
 ```
