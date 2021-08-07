@@ -7,18 +7,18 @@ const routes = [
   {
     path: '/',
     name: 'Index',
-    component: () => import('@/views/Home.vue'),
+    component: () => import(/* webpackChunkName: "Index" */ '@/views/Home.vue'),
     redirect: { name: 'GameDirectory' },
     children: [
       {
         path: 'directory',
         name: 'GameDirectory',
-        component: () => import('@/views/GameDirectory.vue'),
+        component: () => import(/* webpackChunkName: "Index" */ '@/views/GameDirectory.vue'),
       },
       {
         path: 'directory/all',
         name: 'AllStream',
-        component: () => import('@/views/AllStream.vue'),
+        component: () => import(/* webpackChunkName: "Index" */ '@/views/AllStream.vue'),
         props: (route) => ({
           routeName: route.name,
         }),
@@ -27,7 +27,7 @@ const routes = [
   },
   {
     path: '/directory/game/:name/',
-    component: () => import('@/views/Game.vue'),
+    component: () => import(/* webpackChunkName: "Game" */ '@/views/Game.vue'),
     props: (route) => ({
       gameName: route.params.name,
     }),
@@ -35,7 +35,7 @@ const routes = [
       {
         path: '',
         name: 'GameStream',
-        component: () => import('@/views/GameStream.vue'),
+        component: () => import(/* webpackChunkName: "Game" */ '@/views/GameStream.vue'),
         props: (route) => ({
           routeName: route.name,
         }),
@@ -43,7 +43,7 @@ const routes = [
       {
         path: 'cliplist',
         name: 'ClipList',
-        component: () => import('@/views/ClipList.vue'),
+        component: () => import(/* webpackChunkName: "Game" */ '@/views/ClipList.vue'),
         props: (route) => ({
           routeName: route.name,
           gameName: route.params.name,
@@ -54,7 +54,7 @@ const routes = [
   {
     path: '/stream/:name',
     name: 'Stream',
-    component: () => import('@/views/Stream.vue'),
+    component: () => import(/* webpackChunkName: "Stream" */ '@/views/Stream.vue'),
     props: (route) => ({
       name: route.params.name,
     }),
@@ -62,7 +62,7 @@ const routes = [
   {
     path: '/:name/clip/:slug',
     name: 'Clip',
-    component: () => import('@/views/Clip.vue'),
+    component: () => import(/* webpackChunkName: "Clip" */ '@/views/Clip.vue'),
     props: (route) => ({
       slug: route.params.slug,
     }),
@@ -70,7 +70,7 @@ const routes = [
   {
     path: '/team/:name',
     name: 'Team',
-    component: () => import('@/views/Team.vue'),
+    component: () => import(/* webpackChunkName: "Team" */ '@/views/Team.vue'),
     props: (route) => ({
       name: route.params.name,
     }),
@@ -78,7 +78,7 @@ const routes = [
   {
     path: '/search',
     name: 'Search',
-    component: () => import('@/views/Search.vue'),
+    component: () => import(/* webpackChunkName: "Search" */ '@/views/Search.vue'),
     props: (route) => ({
       term: route.query.term,
     }),
@@ -87,7 +87,7 @@ const routes = [
       {
         path: 'channels',
         name: 'SearchChannels',
-        component: () => import('@/views/SearchChannels.vue'),
+        component: () => import(/* webpackChunkName: "Search" */ '@/views/SearchChannels.vue'),
         beforeEnter(to, from, next) {
           if (!to.query.term) next({ name: 'GameDirectory' });
           else next();
@@ -96,7 +96,7 @@ const routes = [
       {
         path: 'categories',
         name: 'SearchCategories',
-        component: () => import('@/views/SearchCategories.vue'),
+        component: () => import(/* webpackChunkName: "Search" */ '@/views/SearchCategories.vue'),
         beforeEnter(to, from, next) {
           if (!to.query.term) next({ name: 'GameDirectory' });
           else next();
